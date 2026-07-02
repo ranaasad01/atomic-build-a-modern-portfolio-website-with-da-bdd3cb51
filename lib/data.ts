@@ -21,13 +21,13 @@ export type Skill = {
 
 // ─── Brand constants ───────────────────────────────────────────────────────────
 export const BRAND = {
-  name: "Alex Mercer",
-  initials: "AM",
+  name: "ASad Rana",
+  initials: "AR",
   tagline: "Creative Developer",
-  email: "hello@alexmercer.dev",
-  github: "https://github.com/alexmercer",
-  twitter: "https://twitter.com/alexmercer",
-  linkedin: "https://linkedin.com/in/alexmercer",
+  email: "hello@asadrana.dev",
+  github: "https://github.com/asadrana",
+  twitter: "https://twitter.com/asadrana",
+  linkedin: "https://linkedin.com/in/asadrana",
 } as const;
 
 // ─── Navigation (single source of truth) ──────────────────────────────────────
