@@ -389,7 +389,11 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 text-xs text-white/40 hover:text-white/70 transition-colors duration-200 font-medium"
-              data-atomic-id="a1gik2vq">
+              data-atomic-id="a1gik2vq"
+              style={{
+                color: "#ffffff",
+                backgroundColor: "#ef4444"
+              }}>
 
               <Github size={12} />
 
