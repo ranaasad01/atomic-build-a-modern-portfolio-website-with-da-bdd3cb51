@@ -23,7 +23,7 @@ const projects = [
     description:
       "A comprehensive component library built for scale. Covers tokens, accessibility, dark mode, and full Figma parity across 80+ components.",
     tags: ["React", "TypeScript", "Storybook", "Figma"],
-    image: "https://cdn.prod.website-files.com/5e60642a30fed6e8bad55789/5f374060a5fdcb0681140afc_LDC_meta-image-2.png",
+    image: "https://titoaistorageaccount.blob.core.windows.net/titoai-storage/bdd3cb51-7458-492d-9c88-349fa09199b7/images/uploaded-1782980197267-9r1bfr.png?v=1782980198389",
     liveUrl: "#",
     githubUrl: "#",
     featured: true,
