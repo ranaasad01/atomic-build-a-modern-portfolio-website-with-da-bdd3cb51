@@ -88,7 +88,7 @@ export default function RootLayout({
         <main
           data-atomic-id="a1vhymfz"
           style={{
-            color: "#a855f7"
+            color: "#ef4444"
           }}>{children}</main>
 
         <Footer />
