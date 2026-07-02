@@ -267,15 +267,14 @@ const testimonials = [
 function SectionLabel({ children }: { children: React.ReactNode }) {
 
   return (
-
-    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-purple-500/20 bg-purple-500/5 text-purple-400 text-xs font-medium tracking-widest uppercase mb-4">
-
-      <span className="w-1 h-1 rounded-full bg-purple-400 animate-pulse" />
-
+    <div
+      className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-purple-500/20 bg-purple-500/5 text-purple-400 text-xs font-medium tracking-widest uppercase mb-4"
+      data-atomic-id="amgf7s">
+      <span
+        className="w-1 h-1 rounded-full bg-purple-400 animate-pulse"
+        data-atomic-id="a11w18ey" />
       {children}
-
     </div>
-
   );
 
 }
@@ -285,7 +284,6 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
   const [hovered, setHovered] = useState(false);
 
   return (
-
     <motion.article
 
       variants={scaleIn}
@@ -297,32 +295,31 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
       className="group relative flex flex-col rounded-2xl border border-white/5 bg-[#1a1a1a] overflow-hidden hover:border-purple-500/20 transition-all duration-300 hover:shadow-[0_0_40px_rgba(168,85,247,0.08)]"
 
     >
-
       {/* Image */}
-
-      <div className="relative h-48 overflow-hidden bg-[#111]">
+      <div
+        className="relative h-48 overflow-hidden bg-[#111]"
+        data-atomic-id="a9e7kr3">
 
         <img
-
           src={project.image}
-
           alt={project.title}
-
           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-
           onError={(e) => {
 
             (e.currentTarget as HTMLImageElement).style.display = "none";
 
           }}
+          data-atomic-id="a1ypnj3g" />
 
-        />
-
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-transparent to-transparent" />
+        <div
+          className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a] via-transparent to-transparent"
+          data-atomic-id="a1yr28xg" />
 
         {project.featured && (
 
-          <span className="absolute top-3 right-3 px-2 py-0.5 rounded-full bg-purple-500/20 border border-purple-500/30 text-purple-300 text-[10px] font-medium tracking-wider uppercase">
+          <span
+            className="absolute top-3 right-3 px-2 py-0.5 rounded-full bg-purple-500/20 border border-purple-500/30 text-purple-300 text-[10px] font-medium tracking-wider uppercase"
+            data-atomic-id="a102z04x">
 
             Featured
 
@@ -331,18 +328,20 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
         )}
 
       </div>
-
       {/* Content */}
+      <div className="flex flex-col flex-1 p-6 gap-3" data-atomic-id="a9h1903">
 
-      <div className="flex flex-col flex-1 p-6 gap-3">
-
-        <h3 className="font-display font-semibold text-lg text-white group-hover:text-purple-300 transition-colors duration-200">
+        <h3
+          className="font-display font-semibold text-lg text-white group-hover:text-purple-300 transition-colors duration-200"
+          data-atomic-id="afgumtq">
 
           {project.title}
 
         </h3>
 
-        <p className="text-sm text-white/50 leading-relaxed flex-1">
+        <p
+          className="text-sm text-white/50 leading-relaxed flex-1"
+          data-atomic-id="afjak91">
 
           {project.description}
 
@@ -350,43 +349,30 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
 
         {/* Tags */}
 
-        <div className="flex flex-wrap gap-1.5 pt-1">
+        <div className="flex flex-wrap gap-1.5 pt-1" data-atomic-id="adcizwc">
 
-          {project.tags.map((tag) => (
-
-            <span
-
-              key={tag}
-
-              className="px-2 py-0.5 rounded-md bg-white/5 border border-white/5 text-white/40 text-[11px] font-medium"
-
-            >
-
-              {tag}
-
-            </span>
-
-          ))}
+          {project.tags.map((tag, __atomicIdx) => (<span
+            key={tag}
+            className="px-2 py-0.5 rounded-md bg-white/5 border border-white/5 text-white/40 text-[11px] font-medium"
+            data-atomic-id="a1yoc0ih"
+            data-atomic-instance={__atomicIdx}>
+            {tag}
+          </span>))}
 
         </div>
 
         {/* Links */}
 
-        <div className="flex items-center gap-3 pt-2">
+        <div className="flex items-center gap-3 pt-2" data-atomic-id="aanfeg7">
 
           {project.liveUrl && (
 
             <a
-
               href={project.liveUrl}
-
               target="_blank"
-
               rel="noopener noreferrer"
-
               className="inline-flex items-center gap-1.5 text-xs text-purple-400 hover:text-purple-300 transition-colors duration-200 font-medium"
-
-            >
+              data-atomic-id="aa97q38">
 
               <ExternalLink size={12} />
 
@@ -399,16 +385,11 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
           {project.githubUrl && (
 
             <a
-
               href={project.githubUrl}
-
               target="_blank"
-
               rel="noopener noreferrer"
-
               className="inline-flex items-center gap-1.5 text-xs text-white/40 hover:text-white/70 transition-colors duration-200 font-medium"
-
-            >
+              data-atomic-id="a1gik2vq">
 
               <Github size={12} />
 
@@ -421,9 +402,7 @@ function ProjectCard({ project }: { project: (typeof projects)[0] }) {
         </div>
 
       </div>
-
     </motion.article>
-
   );
 
 }
@@ -443,29 +422,32 @@ export default function HomePage() {
   }, []);
 
   return (
-
-    <div className="min-h-screen bg-[#0f0f0f] text-white">
-
+    <div
+      className="min-h-screen bg-[#0f0f0f] text-white"
+      data-atomic-id="a1l06f6q">
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
-
-      <section className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-24 pb-16 overflow-hidden">
+      <section
+        className="relative min-h-screen flex flex-col items-center justify-center px-6 pt-24 pb-16 overflow-hidden"
+        data-atomic-id="a12bmc8p">
 
         {/* Background glows */}
 
-        <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute inset-0 pointer-events-none" data-atomic-id="abokm6k">
 
-          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-purple-600/10 blur-[120px]" />
+          <div
+            className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] rounded-full bg-purple-600/10 blur-[120px]"
+            data-atomic-id="a1joo0sv" />
 
-          <div className="absolute top-1/3 left-1/4 w-[300px] h-[300px] rounded-full bg-indigo-600/8 blur-[80px]" />
+          <div
+            className="absolute top-1/3 left-1/4 w-[300px] h-[300px] rounded-full bg-indigo-600/8 blur-[80px]"
+            data-atomic-id="a1jq2uxd" />
 
         </div>
 
         {/* Grid overlay */}
 
         <div
-
           className="absolute inset-0 pointer-events-none opacity-[0.03]"
-
           style={{
 
             backgroundImage:
@@ -475,8 +457,7 @@ export default function HomePage() {
             backgroundSize: "60px 60px",
 
           }}
-
-        />
+          data-atomic-id="abreafk" />
 
         <motion.div
 
@@ -494,9 +475,13 @@ export default function HomePage() {
 
           <motion.div variants={fadeInUp}>
 
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-purple-500/20 bg-purple-500/5 text-purple-300 text-xs font-medium tracking-widest uppercase">
+            <span
+              className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-purple-500/20 bg-purple-500/5 text-purple-300 text-xs font-medium tracking-widest uppercase"
+              data-atomic-id="a198h7zd">
 
-              <span className="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse" />
+              <span
+                className="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse"
+                data-atomic-id="arybqx8" />
 
               Available for new projects
 
@@ -516,7 +501,9 @@ export default function HomePage() {
 
             Hi, I&apos;m{" "}
 
-            <span className="bg-gradient-to-r from-purple-400 via-violet-400 to-indigo-400 bg-clip-text text-transparent">
+            <span
+              className="bg-gradient-to-r from-purple-400 via-violet-400 to-indigo-400 bg-clip-text text-transparent"
+              data-atomic-id="a1vg9t67">
 
               {BRAND.name}
 
@@ -616,21 +603,24 @@ export default function HomePage() {
 
           >
 
-            {stats.map((stat) => (
+            {stats.map((stat, __atomicIdx) => (<div
+              key={stat.label}
+              className="flex flex-col items-center gap-1"
+              data-atomic-id="a1bz83vg"
+              data-atomic-instance={__atomicIdx}>
+              <span
+                className="font-display text-3xl font-bold bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent"
+                data-atomic-id="a1w0g5m6"
+                data-atomic-instance={__atomicIdx}>
 
-              <div key={stat.label} className="flex flex-col items-center gap-1">
+                {stat.value}
 
-                <span className="font-display text-3xl font-bold bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
-
-                  {stat.value}
-
-                </span>
-
-                <span className="text-xs text-white/40 text-center">{stat.label}</span>
-
-              </div>
-
-            ))}
+              </span>
+              <span
+                className="text-xs text-white/40 text-center"
+                data-atomic-id="a1xb1rqo"
+                data-atomic-instance={__atomicIdx}>{stat.label}</span>
+            </div>))}
 
           </motion.div>
 
@@ -650,19 +640,21 @@ export default function HomePage() {
 
         >
 
-          <span className="text-[10px] text-white/20 tracking-widest uppercase">Scroll</span>
+          <span
+            className="text-[10px] text-white/20 tracking-widest uppercase"
+            data-atomic-id="ayik79r">Scroll</span>
 
-          <div className="w-px h-8 bg-gradient-to-b from-white/20 to-transparent" />
+          <div
+            className="w-px h-8 bg-gradient-to-b from-white/20 to-transparent"
+            data-atomic-id="a1xyohb6" />
 
         </motion.div>
 
       </section>
-
       {/* ── PROJECTS ─────────────────────────────────────────────────────── */}
+      <section id="projects" className="py-24 px-6" data-atomic-id="apjl0u5">
 
-      <section id="projects" className="py-24 px-6">
-
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto" data-atomic-id="ap6wwr2">
 
           <motion.div
 
@@ -729,12 +721,10 @@ export default function HomePage() {
         </div>
 
       </section>
-
       {/* ── SERVICES ─────────────────────────────────────────────────────── */}
+      <section className="py-24 px-6 bg-[#0a0a0a]" data-atomic-id="a122k58o">
 
-      <section className="py-24 px-6 bg-[#0a0a0a]">
-
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto" data-atomic-id="audx5rt">
 
           <motion.div
 
@@ -784,43 +774,45 @@ export default function HomePage() {
 
           >
 
-            {services.map((service) => (
+            {services.map((service, __atomicIdx) => (<motion.div
 
-              <motion.div
+              key={service.title}
 
-                key={service.title}
+              variants={fadeInUp}
 
-                variants={fadeInUp}
+              className="p-6 rounded-2xl border border-white/5 bg-[#1a1a1a] hover:border-purple-500/20 transition-all duration-300 group"
 
-                className="p-6 rounded-2xl border border-white/5 bg-[#1a1a1a] hover:border-purple-500/20 transition-all duration-300 group"
+            >
+              <div
+                className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center mb-4 group-hover:bg-purple-500/15 transition-colors duration-200"
+                data-atomic-id="a14y0zv3"
+                data-atomic-instance={__atomicIdx}>
 
-              >
+                <service.icon size={18} className="text-purple-400" />
 
-                <div className="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center mb-4 group-hover:bg-purple-500/15 transition-colors duration-200">
-
-                  <service.icon size={18} className="text-purple-400" />
-
-                </div>
-
-                <h3 className="font-display font-semibold text-white mb-2">{service.title}</h3>
-
-                <p className="text-sm text-white/40 leading-relaxed">{service.description}</p>
-
-              </motion.div>
-
-            ))}
+              </div>
+              <h3
+                className="font-display font-semibold text-white mb-2"
+                data-atomic-id="a3e75e1"
+                data-atomic-instance={__atomicIdx}
+                style={__atomicIdx === 1 ? {
+                  color: "#ef4444"
+                } : undefined}>{service.title}</h3>
+              <p
+                className="text-sm text-white/40 leading-relaxed"
+                data-atomic-id="au8jfs0"
+                data-atomic-instance={__atomicIdx}>{service.description}</p>
+            </motion.div>))}
 
           </motion.div>
 
         </div>
 
       </section>
-
       {/* ── SKILLS ───────────────────────────────────────────────────────── */}
+      <section id="skills" className="py-24 px-6" data-atomic-id="apaitu4">
 
-      <section id="skills" className="py-24 px-6">
-
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto" data-atomic-id="a17xoagt">
 
           <motion.div
 
@@ -876,47 +868,46 @@ export default function HomePage() {
 
           >
 
-            {skills.map((skill) => (
+            {skills.map((skill, __atomicIdx) => (<motion.div
 
-              <motion.div
+              key={skill.name}
 
-                key={skill.name}
+              variants={scaleIn}
 
-                variants={scaleIn}
+              className="group flex items-center gap-2 px-4 py-2 rounded-xl border border-white/5 bg-[#1a1a1a] hover:border-purple-500/20 hover:bg-purple-500/5 transition-all duration-200 cursor-default"
 
-                className="group flex items-center gap-2 px-4 py-2 rounded-xl border border-white/5 bg-[#1a1a1a] hover:border-purple-500/20 hover:bg-purple-500/5 transition-all duration-200 cursor-default"
+            >
+              <span
+                className="w-1.5 h-1.5 rounded-full bg-purple-500/60 group-hover:bg-purple-400 transition-colors duration-200"
+                data-atomic-id="a11y44de"
+                data-atomic-instance={__atomicIdx} />
+              <span
+                className="text-sm text-white/60 group-hover:text-white/90 transition-colors duration-200 font-medium"
+                data-atomic-id="a138pqhw"
+                data-atomic-instance={__atomicIdx}>
 
-              >
+                {skill.name}
 
-                <span className="w-1.5 h-1.5 rounded-full bg-purple-500/60 group-hover:bg-purple-400 transition-colors duration-200" />
+              </span>
+              <span
+                className="text-[10px] text-white/20 group-hover:text-purple-400/60 transition-colors duration-200"
+                data-atomic-id="a14jbcme"
+                data-atomic-instance={__atomicIdx}>
 
-                <span className="text-sm text-white/60 group-hover:text-white/90 transition-colors duration-200 font-medium">
+                {skill.category}
 
-                  {skill.name}
-
-                </span>
-
-                <span className="text-[10px] text-white/20 group-hover:text-purple-400/60 transition-colors duration-200">
-
-                  {skill.category}
-
-                </span>
-
-              </motion.div>
-
-            ))}
+              </span>
+            </motion.div>))}
 
           </motion.div>
 
         </div>
 
       </section>
-
       {/* ── ABOUT ────────────────────────────────────────────────────────── */}
+      <section id="about" className="py-24 px-6 bg-[#0a0a0a]" data-atomic-id="acihifk">
 
-      <section id="about" className="py-24 px-6 bg-[#0a0a0a]">
-
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto" data-atomic-id="a1lhff5t">
 
           <motion.div
 
@@ -936,15 +927,19 @@ export default function HomePage() {
 
               <SectionLabel>About</SectionLabel>
 
-              <h2 className="font-display text-4xl sm:text-5xl font-bold tracking-tight text-white">
+              <h2
+                className="font-display text-4xl sm:text-5xl font-bold tracking-tight text-white"
+                data-atomic-id="a1w739pf">
 
                 Crafting digital experiences with purpose
 
               </h2>
 
-              <div className="space-y-4 text-white/50 leading-relaxed">
+              <div
+                className="space-y-4 text-white/50 leading-relaxed"
+                data-atomic-id="a1ckwzbi">
 
-                <p>
+                <p data-atomic-id="ahq1nmm">
 
                   I&apos;m a full-stack developer with 5+ years of experience building
 
@@ -956,7 +951,7 @@ export default function HomePage() {
 
                 </p>
 
-                <p>
+                <p data-atomic-id="ahq1pb4">
 
                   When I&apos;m not shipping features, you&apos;ll find me contributing to
 
@@ -968,7 +963,7 @@ export default function HomePage() {
 
               </div>
 
-              <div className="flex flex-wrap gap-3 pt-2">
+              <div className="flex flex-wrap gap-3 pt-2" data-atomic-id="a1cmbtg0">
 
                 {[
 
@@ -978,23 +973,14 @@ export default function HomePage() {
 
                   "UTC+0 to UTC+8",
 
-                ].map((badge) => (
-
-                  <span
-
-                    key={badge}
-
-                    className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-white/10 text-white/50 text-xs font-medium"
-
-                  >
-
-                    <CheckCircle size={11} className="text-purple-400" />
-
-                    {badge}
-
-                  </span>
-
-                ))}
+                ].map((badge, __atomicIdx) => (<span
+                  key={badge}
+                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full border border-white/10 text-white/50 text-xs font-medium"
+                  data-atomic-id="a17kdhrh"
+                  data-atomic-instance={__atomicIdx}>
+                  <CheckCircle size={11} className="text-purple-400" />
+                  {badge}
+                </span>))}
 
               </div>
 
@@ -1002,27 +988,24 @@ export default function HomePage() {
 
             <motion.div variants={slideInRight} className="grid grid-cols-2 gap-4">
 
-              {stats.map((stat) => (
+              {stats.map((stat, __atomicIdx) => (<div
+                key={stat.label}
+                className="p-6 rounded-2xl border border-white/5 bg-[#1a1a1a] flex flex-col gap-1"
+                data-atomic-id="a1lske2f"
+                data-atomic-instance={__atomicIdx}>
+                <span
+                  className="font-display text-4xl font-bold bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent"
+                  data-atomic-id="a600b61"
+                  data-atomic-instance={__atomicIdx}>
 
-                <div
+                  {stat.value}
 
-                  key={stat.label}
-
-                  className="p-6 rounded-2xl border border-white/5 bg-[#1a1a1a] flex flex-col gap-1"
-
-                >
-
-                  <span className="font-display text-4xl font-bold bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
-
-                    {stat.value}
-
-                  </span>
-
-                  <span className="text-sm text-white/40">{stat.label}</span>
-
-                </div>
-
-              ))}
+                </span>
+                <span
+                  className="text-sm text-white/40"
+                  data-atomic-id="a7alxaj"
+                  data-atomic-instance={__atomicIdx}>{stat.label}</span>
+              </div>))}
 
             </motion.div>
 
@@ -1031,12 +1014,10 @@ export default function HomePage() {
         </div>
 
       </section>
-
       {/* ── TESTIMONIALS ─────────────────────────────────────────────────── */}
+      <section className="py-24 px-6" data-atomic-id="awswpez">
 
-      <section className="py-24 px-6">
-
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto" data-atomic-id="a6vjfwc">
 
           <motion.div
 
@@ -1086,63 +1067,71 @@ export default function HomePage() {
 
           >
 
-            {testimonials.map((t) => (
+            {testimonials.map((t, __atomicIdx) => (<motion.div
 
-              <motion.div
+              key={t.id}
 
-                key={t.id}
+              variants={fadeInUp}
 
-                variants={fadeInUp}
+              className="p-6 rounded-2xl border border-white/5 bg-[#1a1a1a] flex flex-col gap-4"
 
-                className="p-6 rounded-2xl border border-white/5 bg-[#1a1a1a] flex flex-col gap-4"
+            >
+              <div
+                className="flex gap-0.5"
+                data-atomic-id="apad2k2"
+                data-atomic-instance={__atomicIdx}>
 
-              >
+                {Array.from({ length: 5 }).map((_, i) => (
 
-                <div className="flex gap-0.5">
+                  <Star key={i} size={12} className="fill-purple-400 text-purple-400" />
 
-                  {Array.from({ length: 5 }).map((_, i) => (
+                ))}
 
-                    <Star key={i} size={12} className="fill-purple-400 text-purple-400" />
+              </div>
+              <p
+                className="text-sm text-white/60 leading-relaxed flex-1"
+                data-atomic-id="au3boxt"
+                data-atomic-instance={__atomicIdx}>&ldquo;{t.body}&rdquo;</p>
+              <div
+                className="flex items-center gap-3 pt-2 border-t border-white/5"
+                data-atomic-id="apd6qt2"
+                data-atomic-instance={__atomicIdx}>
 
-                  ))}
+                <div
+                  className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center text-[10px] font-bold text-white"
+                  data-atomic-id="ax9hry1"
+                  data-atomic-instance={__atomicIdx}>
 
-                </div>
-
-                <p className="text-sm text-white/60 leading-relaxed flex-1">&ldquo;{t.body}&rdquo;</p>
-
-                <div className="flex items-center gap-3 pt-2 border-t border-white/5">
-
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center text-[10px] font-bold text-white">
-
-                    {t.avatar}
-
-                  </div>
-
-                  <div>
-
-                    <p className="text-sm font-medium text-white">{t.name}</p>
-
-                    <p className="text-xs text-white/30">{t.role}</p>
-
-                  </div>
+                  {t.avatar}
 
                 </div>
 
-              </motion.div>
+                <div data-atomic-id="axawm2j" data-atomic-instance={__atomicIdx}>
 
-            ))}
+                  <p
+                    className="text-sm font-medium text-white"
+                    data-atomic-id="a6vl3sb"
+                    data-atomic-instance={__atomicIdx}>{t.name}</p>
+
+                  <p
+                    className="text-xs text-white/30"
+                    data-atomic-id="a6vl5gt"
+                    data-atomic-instance={__atomicIdx}>{t.role}</p>
+
+                </div>
+
+              </div>
+            </motion.div>))}
 
           </motion.div>
 
         </div>
 
       </section>
-
       {/* ── CONTACT ──────────────────────────────────────────────────────── */}
+      <section id="contact" className="py-24 px-6 bg-[#0a0a0a]" data-atomic-id="ak0ve0f">
 
-      <section id="contact" className="py-24 px-6 bg-[#0a0a0a]">
-
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-2xl mx-auto" data-atomic-id="akfaklc">
 
           <motion.div
 
@@ -1200,97 +1189,88 @@ export default function HomePage() {
 
           >
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div
+              className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+              data-atomic-id="ah85iqw">
 
-              <div className="flex flex-col gap-1.5">
+              <div className="flex flex-col gap-1.5" data-atomic-id="aexz3hn">
 
-                <label className="text-xs text-white/40 font-medium uppercase tracking-wider">
+                <label
+                  className="text-xs text-white/40 font-medium uppercase tracking-wider"
+                  data-atomic-id="ahizq97">
 
                   Name
 
                 </label>
 
                 <input
-
                   type="text"
-
                   placeholder="Your name"
-
                   className="px-4 py-3 rounded-xl bg-[#1a1a1a] border border-white/5 text-white placeholder-white/20 text-sm focus:outline-none focus:border-purple-500/40 focus:ring-1 focus:ring-purple-500/20 transition-all duration-200"
-
-                />
+                  data-atomic-id="a1o6z3ul" />
 
               </div>
 
-              <div className="flex flex-col gap-1.5">
+              <div className="flex flex-col gap-1.5" data-atomic-id="aezdxm5">
 
-                <label className="text-xs text-white/40 font-medium uppercase tracking-wider">
+                <label
+                  className="text-xs text-white/40 font-medium uppercase tracking-wider"
+                  data-atomic-id="a7l4iy5">
 
                   Email
 
                 </label>
 
                 <input
-
                   type="email"
-
                   placeholder="your@email.com"
-
                   className="px-4 py-3 rounded-xl bg-[#1a1a1a] border border-white/5 text-white placeholder-white/20 text-sm focus:outline-none focus:border-purple-500/40 focus:ring-1 focus:ring-purple-500/20 transition-all duration-200"
-
-                />
+                  data-atomic-id="a1e93wjj" />
 
               </div>
 
             </div>
 
-            <div className="flex flex-col gap-1.5">
+            <div className="flex flex-col gap-1.5" data-atomic-id="ah9kcve">
 
-              <label className="text-xs text-white/40 font-medium uppercase tracking-wider">
+              <label
+                className="text-xs text-white/40 font-medium uppercase tracking-wider"
+                data-atomic-id="a1wwlney">
 
                 Subject
 
               </label>
 
               <input
-
                 type="text"
-
                 placeholder="Project inquiry"
-
                 className="px-4 py-3 rounded-xl bg-[#1a1a1a] border border-white/5 text-white placeholder-white/20 text-sm focus:outline-none focus:border-purple-500/40 focus:ring-1 focus:ring-purple-500/20 transition-all duration-200"
-
-              />
+                data-atomic-id="a14jgz18" />
 
             </div>
 
-            <div className="flex flex-col gap-1.5">
+            <div className="flex flex-col gap-1.5" data-atomic-id="ahaz6zw">
 
-              <label className="text-xs text-white/40 font-medium uppercase tracking-wider">
+              <label
+                className="text-xs text-white/40 font-medium uppercase tracking-wider"
+                data-atomic-id="a1myqg3w">
 
                 Message
 
               </label>
 
               <textarea
-
                 rows={5}
-
                 placeholder="Tell me about your project..."
-
                 className="px-4 py-3 rounded-xl bg-[#1a1a1a] border border-white/5 text-white placeholder-white/20 text-sm focus:outline-none focus:border-purple-500/40 focus:ring-1 focus:ring-purple-500/20 transition-all duration-200 resize-none"
-
-              />
+                data-atomic-id="ad7nxws" />
 
             </div>
 
             <button
-
               type="submit"
-
               className="w-full py-3.5 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-medium text-sm transition-all duration-200 shadow-[0_0_24px_rgba(168,85,247,0.3)] hover:shadow-[0_0_32px_rgba(168,85,247,0.5)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500"
-
-            >
+              data-atomic-id="a1yu96ef">
 
               Send message
 
@@ -1301,9 +1281,7 @@ export default function HomePage() {
         </div>
 
       </section>
-
     </div>
-
   );
 
 }
