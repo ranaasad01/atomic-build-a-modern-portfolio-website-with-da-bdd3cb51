@@ -1,6 +1,5 @@
 "use client";
-
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
 import { ArrowRight, Code2 as Github, MessageCircle as Twitter, Briefcase as Linkedin, Mail, ExternalLink, Code, Sparkles, Star, CheckCircle, Terminal, Layout, Activity, FileCode } from 'lucide-react';
@@ -146,7 +145,9 @@ const stats = [
 
 function Tag({ label }: { label: string }) {
   return (
-    <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-500/10 text-purple-300 border border-purple-500/20">
+    <span
+      className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-purple-500/10 text-purple-300 border border-purple-500/20"
+      data-atomic-id="akldnhz">
       {label}
     </span>
   );
@@ -156,7 +157,9 @@ function Tag({ label }: { label: string }) {
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
   return (
-    <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-widest text-purple-400 bg-purple-500/10 border border-purple-500/20">
+    <span
+      className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-widest text-purple-400 bg-purple-500/10 border border-purple-500/20"
+      data-atomic-id="apzw12w">
       {children}
     </span>
   );
@@ -205,16 +208,24 @@ export default function HomePage() {
     : { variants: fadeInUp, initial: "hidden", whileInView: "visible" };
 
   return (
-    <main className="bg-[#0a0a0a] text-white overflow-x-hidden">
+    <main
+      className="bg-[#0a0a0a] text-white overflow-x-hidden"
+      data-atomic-id="am2dwsq">
       {/* ── HERO ─────────────────────────────────────────────────────────── */}
       <section
         id="home"
         className="relative min-h-screen flex items-center pt-16"
-      >
+        data-atomic-id="a13m40vz">
         {/* Background glow */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-purple-600/10 rounded-full blur-[120px]" />
-          <div className="absolute top-1/3 left-1/4 w-[400px] h-[400px] bg-indigo-600/8 rounded-full blur-[100px]" />
+        <div
+          className="absolute inset-0 pointer-events-none overflow-hidden"
+          data-atomic-id="akjdymq">
+          <div
+            className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-purple-600/10 rounded-full blur-[120px]"
+            data-atomic-id="a851v2t" />
+          <div
+            className="absolute top-1/3 left-1/4 w-[400px] h-[400px] bg-indigo-600/8 rounded-full blur-[100px]"
+            data-atomic-id="a86gp7b" />
           {/* Subtle grid */}
           <div
             className="absolute inset-0 opacity-[0.03]"
@@ -223,10 +234,12 @@ export default function HomePage() {
                 "linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)",
               backgroundSize: "64px 64px",
             }}
-          />
+            data-atomic-id="a89adgb" />
         </div>
 
-        <div className="relative max-w-6xl mx-auto px-6 py-24 md:py-32 grid md:grid-cols-2 gap-16 items-center">
+        <div
+          className="relative max-w-6xl mx-auto px-6 py-24 md:py-32 grid md:grid-cols-2 gap-16 items-center"
+          data-atomic-id="akkssr8">
           {/* Left: copy */}
           <motion.div
             variants={shouldReduceMotion ? undefined : staggerContainer}
@@ -249,11 +262,13 @@ export default function HomePage() {
               className="text-5xl md:text-6xl lg:text-7xl font-display font-bold tracking-tight leading-[1.05] text-balance"
             >
               I build things
-              <br />
-              <span className="bg-gradient-to-r from-purple-400 via-violet-400 to-indigo-400 bg-clip-text text-transparent">
+              <br data-atomic-id="a1fp1u9e" />
+              <span
+                className="bg-gradient-to-r from-purple-400 via-violet-400 to-indigo-400 bg-clip-text text-transparent"
+                data-atomic-id="a15mfnyq">
                 people love
               </span>
-              <br />
+              <br data-atomic-id="a1fp4x6e" />
               to use.
             </motion.h1>
 
@@ -279,7 +294,7 @@ export default function HomePage() {
                     ?.scrollIntoView({ behavior: "smooth" });
                 }}
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-purple-600 hover:bg-purple-500 text-white font-medium text-sm transition-all duration-200 shadow-[0_0_24px_rgba(168,85,247,0.35)] hover:shadow-[0_0_36px_rgba(168,85,247,0.55)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400"
-              >
+                data-atomic-id="a116x6rn">
                 View my work
                 <ArrowRight size={15} />
               </a>
@@ -292,7 +307,7 @@ export default function HomePage() {
                     ?.scrollIntoView({ behavior: "smooth" });
                 }}
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-white/10 hover:border-white/20 text-white/70 hover:text-white font-medium text-sm transition-all duration-200 hover:bg-white/5 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-400"
-              >
+                data-atomic-id="a116x8g5">
                 Get in touch
               </a>
             </motion.div>
@@ -311,18 +326,17 @@ export default function HomePage() {
                   href: `mailto:${BRAND.email}`,
                   label: "Email",
                 },
-              ].map(({ icon: Icon, href, label }) => (
-                <a
-                  key={label}
-                  href={href}
-                  target={href.startsWith("mailto") ? undefined : "_blank"}
-                  rel="noopener noreferrer"
-                  aria-label={label}
-                  className="w-9 h-9 flex items-center justify-center rounded-lg text-white/40 hover:text-white border border-white/8 hover:border-white/15 hover:bg-white/5 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500"
-                >
-                  <Icon size={15} />
-                </a>
-              ))}
+              ].map(({ icon: Icon, href, label }, __atomicIdx) => (<a
+                key={label}
+                href={href}
+                target={href.startsWith("mailto") ? undefined : "_blank"}
+                rel="noopener noreferrer"
+                aria-label={label}
+                className="w-9 h-9 flex items-center justify-center rounded-lg text-white/40 hover:text-white border border-white/8 hover:border-white/15 hover:bg-white/5 transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500"
+                data-atomic-id="a1uk53qx"
+                data-atomic-instance={__atomicIdx}>
+                <Icon size={15} />
+              </a>))}
             </motion.div>
           </motion.div>
 
@@ -334,70 +348,82 @@ export default function HomePage() {
             className="hidden md:flex flex-col gap-6"
           >
             {/* Stats grid */}
-            <div className="grid grid-cols-2 gap-4">
-              {stats.map((stat) => (
-                <motion.div
-                  key={stat.label}
-                  whileHover={
-                    shouldReduceMotion ? undefined : { y: -3, scale: 1.02 }
-                  }
-                  transition={{ duration: 0.2 }}
-                  className="p-5 rounded-2xl bg-white/[0.03] border border-white/8 hover:border-purple-500/30 hover:bg-white/[0.05] transition-all duration-300 shadow-[0_1px_2px_rgba(0,0,0,0.2),0_8px_24px_-8px_rgba(0,0,0,0.4)]"
-                >
-                  <div className="text-3xl font-display font-bold tracking-tight text-white">
-                    {stat.value}
-                  </div>
-                  <div className="text-xs text-white/40 mt-1">{stat.label}</div>
-                </motion.div>
-              ))}
+            <div className="grid grid-cols-2 gap-4" data-atomic-id="a1vswkn6">
+              {stats.map((stat, __atomicIdx) => (<motion.div
+                key={stat.label}
+                whileHover={
+                  shouldReduceMotion ? undefined : { y: -3, scale: 1.02 }
+                }
+                transition={{ duration: 0.2 }}
+                className="p-5 rounded-2xl bg-white/[0.03] border border-white/8 hover:border-purple-500/30 hover:bg-white/[0.05] transition-all duration-300 shadow-[0_1px_2px_rgba(0,0,0,0.2),0_8px_24px_-8px_rgba(0,0,0,0.4)]"
+              >
+                <div
+                  className="text-3xl font-display font-bold tracking-tight text-white"
+                  data-atomic-id="az3axv7"
+                  data-atomic-instance={__atomicIdx}>
+                  {stat.value}
+                </div>
+                <div
+                  className="text-xs text-white/40 mt-1"
+                  data-atomic-id="az4przp"
+                  data-atomic-instance={__atomicIdx}>{stat.label}</div>
+              </motion.div>))}
             </div>
 
             {/* Code snippet card */}
-            <div className="rounded-2xl bg-[#111] border border-white/8 overflow-hidden shadow-[0_1px_2px_rgba(0,0,0,0.3),0_16px_48px_-12px_rgba(0,0,0,0.6)]">
-              <div className="flex items-center gap-2 px-4 py-3 border-b border-white/5 bg-white/[0.02]">
-                <span className="w-3 h-3 rounded-full bg-red-500/70" />
-                <span className="w-3 h-3 rounded-full bg-yellow-500/70" />
-                <span className="w-3 h-3 rounded-full bg-green-500/70" />
-                <span className="ml-2 text-xs text-white/30 font-mono">
+            <div
+              className="rounded-2xl bg-[#111] border border-white/8 overflow-hidden shadow-[0_1px_2px_rgba(0,0,0,0.3),0_16px_48px_-12px_rgba(0,0,0,0.6)]"
+              data-atomic-id="a1vvq8w6">
+              <div
+                className="flex items-center gap-2 px-4 py-3 border-b border-white/5 bg-white/[0.02]"
+                data-atomic-id="a10ds3rd">
+                <span className="w-3 h-3 rounded-full bg-red-500/70" data-atomic-id="a1wpjwwr" />
+                <span
+                  className="w-3 h-3 rounded-full bg-yellow-500/70"
+                  data-atomic-id="a1y05j19" />
+                <span className="w-3 h-3 rounded-full bg-green-500/70" data-atomic-id="a9n36n" />
+                <span className="ml-2 text-xs text-white/30 font-mono" data-atomic-id="a1k8pb5">
                   portfolio.config.ts
                 </span>
               </div>
-              <pre className="p-5 text-xs font-mono leading-relaxed overflow-x-auto">
-                <code>
-                  <span className="text-purple-400">const</span>
-                  <span className="text-white"> developer </span>
-                  <span className="text-purple-400">= </span>
-                  <span className="text-white">{"{"}</span>
+              <pre
+                className="p-5 text-xs font-mono leading-relaxed overflow-x-auto"
+                data-atomic-id="a10f786n">
+                <code data-atomic-id="a84p012">
+                  <span className="text-purple-400" data-atomic-id="ab676f4">const</span>
+                  <span className="text-white" data-atomic-id="acgssjm"> developer </span>
+                  <span className="text-purple-400" data-atomic-id="adreeo4">= </span>
+                  <span className="text-white" data-atomic-id="af200sm">{"{"}</span>
                   {"\n"}
-                  <span className="text-white/40">{"  "}</span>
-                  <span className="text-indigo-300">name</span>
-                  <span className="text-white/60">: </span>
-                  <span className="text-green-400">"Alex Mercer"</span>
-                  <span className="text-white/60">,</span>
+                  <span className="text-white/40" data-atomic-id="al0t3e9">{"  "}</span>
+                  <span className="text-indigo-300" data-atomic-id="ambepir">name</span>
+                  <span className="text-white/60" data-atomic-id="anm0bn9">: </span>
+                  <span className="text-green-400" data-atomic-id="aowlxrr">"Alex Mercer"</span>
+                  <span className="text-white/60" data-atomic-id="aq77jw9">,</span>
                   {"\n"}
-                  <span className="text-white/40">{"  "}</span>
-                  <span className="text-indigo-300">focus</span>
-                  <span className="text-white/60">: </span>
-                  <span className="text-green-400">"Full-Stack"</span>
-                  <span className="text-white/60">,</span>
+                  <span className="text-white/40" data-atomic-id="a17obcl0">{"  "}</span>
+                  <span className="text-indigo-300" data-atomic-id="a18ywypi">focus</span>
+                  <span className="text-white/60" data-atomic-id="a1a9iku0">: </span>
+                  <span className="text-green-400" data-atomic-id="a1bk46yi">"Full-Stack"</span>
+                  <span className="text-white/60" data-atomic-id="a1rqmdir">,</span>
                   {"\n"}
-                  <span className="text-white/40">{"  "}</span>
-                  <span className="text-indigo-300">available</span>
-                  <span className="text-white/60">: </span>
-                  <span className="text-orange-400">true</span>
-                  <span className="text-white/60">,</span>
+                  <span className="text-white/40" data-atomic-id="a1ubtlrr">{"  "}</span>
+                  <span className="text-indigo-300" data-atomic-id="a1vmf7w9">available</span>
+                  <span className="text-white/60" data-atomic-id="a1wx0u0r">: </span>
+                  <span className="text-orange-400" data-atomic-id="ae2eylw">true</span>
+                  <span className="text-white/60" data-atomic-id="afd0kqe">,</span>
                   {"\n"}
-                  <span className="text-white/40">{"  "}</span>
-                  <span className="text-indigo-300">passion</span>
-                  <span className="text-white/60">: </span>
-                  <span className="text-green-400">"great UX"</span>
+                  <span className="text-white/40" data-atomic-id="ahy7sze">{"  "}</span>
+                  <span className="text-indigo-300" data-atomic-id="aj8tf3w">passion</span>
+                  <span className="text-white/60" data-atomic-id="azfblo5">: </span>
+                  <span className="text-green-400" data-atomic-id="a10px7sn">"great UX"</span>
                   {"\n"}
-                  <span className="text-white">{"}"}</span>
+                  <span className="text-white" data-atomic-id="a13b4g1n">{"}"}</span>
                   {"\n"}
                   {"\n"}
-                  <span className="text-purple-400">export default</span>
-                  <span className="text-white"> developer</span>
-                  <span className="text-white/60">;</span>
+                  <span className="text-purple-400" data-atomic-id="a1m2tuuw">export default</span>
+                  <span className="text-white" data-atomic-id="a1ndfgze"> developer</span>
+                  <span className="text-white/60" data-atomic-id="a1oo133w">;</span>
                 </code>
               </pre>
             </div>
@@ -411,7 +437,9 @@ export default function HomePage() {
           transition={{ delay: 1.4, duration: 0.6 }}
           className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
         >
-          <span className="text-xs text-white/25 tracking-widest uppercase">
+          <span
+            className="text-xs text-white/25 tracking-widest uppercase"
+            data-atomic-id="afwdfmy">
             Scroll
           </span>
           <motion.div
@@ -421,15 +449,18 @@ export default function HomePage() {
           />
         </motion.div>
       </section>
-
       {/* ── ABOUT ────────────────────────────────────────────────────────── */}
-      <section id="about" className="relative py-24 md:py-32">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-indigo-600/6 rounded-full blur-[100px]" />
+      <section id="about" className="relative py-24 md:py-32" data-atomic-id="aqu2phf">
+        <div className="absolute inset-0 pointer-events-none" data-atomic-id="ay1q978">
+          <div
+            className="absolute right-0 top-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-indigo-600/6 rounded-full blur-[100px]"
+            data-atomic-id="amz7t1z" />
         </div>
 
-        <div className="relative max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="relative max-w-6xl mx-auto px-6" data-atomic-id="ay353bq">
+          <div
+            className="grid md:grid-cols-2 gap-16 items-center"
+            data-atomic-id="atr3deh">
             {/* Image side */}
             <motion.div
               variants={shouldReduceMotion ? undefined : slideInLeft}
@@ -438,13 +469,18 @@ export default function HomePage() {
               viewport={{ once: true, margin: "-80px" }}
               className="relative"
             >
-              <div className="relative rounded-3xl overflow-hidden aspect-[4/5] shadow-[0_1px_2px_rgba(0,0,0,0.3),0_24px_64px_-16px_rgba(0,0,0,0.7)] ring-1 ring-white/8">
+              <div
+                className="relative rounded-3xl overflow-hidden aspect-[4/5] shadow-[0_1px_2px_rgba(0,0,0,0.3),0_24px_64px_-16px_rgba(0,0,0,0.7)] ring-1 ring-white/8"
+                data-atomic-id="a1ak3xz5">
                 <img
                   src="https://media.licdn.com/dms/image/v2/C5603AQEzcEfH73Yx_w/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1554802851672?e=2147483647&v=beta&t=dj7TAjD3hnbucRwbY4Q4mZZd9iwb7uGnq5Q34J3_jMo"
                   alt="Alex Mercer — Creative Developer"
                   className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/60 via-transparent to-transparent" />
+                  data-atomic-id="a6gm5a" />
+                <div
+                  className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a]/60 via-transparent to-transparent"
+                  data-atomic-id="a7vbza"
+                  src="https://titoaistorageaccount.blob.core.windows.net/titoai-storage/bdd3cb51-7458-492d-9c88-349fa09199b7/images/uploaded-1782977891256-7rauoi.png?v=1782977892115" />
               </div>
               {/* Floating badge */}
               <motion.div
@@ -454,9 +490,11 @@ export default function HomePage() {
                 transition={{ delay: 0.4, duration: 0.5, ease: "easeOut" }}
                 className="absolute -bottom-5 -right-5 px-5 py-4 rounded-2xl bg-[#111] border border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.5)]"
               >
-                <div className="flex items-center gap-3">
-                  <span className="w-2.5 h-2.5 rounded-full bg-green-400 shadow-[0_0_8px_rgba(74,222,128,0.6)]" />
-                  <span className="text-sm font-medium text-white/80">
+                <div className="flex items-center gap-3" data-atomic-id="adq7mjs">
+                  <span
+                    className="w-2.5 h-2.5 rounded-full bg-green-400 shadow-[0_0_8px_rgba(74,222,128,0.6)]"
+                    data-atomic-id="a1i85l16" />
+                  <span className="text-sm font-medium text-white/80" data-atomic-id="a1jir75o">
                     Open to projects
                   </span>
                 </div>
@@ -515,15 +553,20 @@ export default function HomePage() {
                   "Accessibility advocate",
                   "Performance obsessed",
                   "Design-system thinker",
-                ].map((trait) => (
-                  <div key={trait} className="flex items-center gap-2.5">
-                    <CheckCircle
-                      size={14}
-                      className="text-purple-400 shrink-0"
-                    />
-                    <span className="text-sm text-white/65">{trait}</span>
-                  </div>
-                ))}
+                ].map((trait, __atomicIdx) => (<div
+                  key={trait}
+                  className="flex items-center gap-2.5"
+                  data-atomic-id="a1qr4ye3"
+                  data-atomic-instance={__atomicIdx}>
+                  <CheckCircle
+                    size={14}
+                    className="text-purple-400 shrink-0"
+                  />
+                  <span
+                    className="text-sm text-white/65"
+                    data-atomic-id="a1yajdm7"
+                    data-atomic-instance={__atomicIdx}>{trait}</span>
+                </div>))}
               </motion.div>
 
               <motion.div
@@ -539,7 +582,7 @@ export default function HomePage() {
                       ?.scrollIntoView({ behavior: "smooth" });
                   }}
                   className="inline-flex items-center gap-2 text-sm font-medium text-purple-400 hover:text-purple-300 transition-colors duration-200 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 rounded"
-                >
+                  data-atomic-id="a1hb3obb">
                   Let's work together
                   <ArrowRight
                     size={14}
@@ -551,14 +594,17 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
       {/* ── SERVICES ─────────────────────────────────────────────────────── */}
-      <section className="relative py-24 md:py-32 bg-[#0d0d0d]">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-transparent via-white/10 to-transparent" />
+      <section className="relative py-24 md:py-32 bg-[#0d0d0d]" data-atomic-id="a9nnolq">
+        <div
+          className="absolute inset-0 pointer-events-none"
+          data-atomic-id="a12idcov">
+          <div
+            className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-transparent via-white/10 to-transparent"
+            data-atomic-id="a1bczsde" />
         </div>
 
-        <div className="relative max-w-6xl mx-auto px-6">
+        <div className="relative max-w-6xl mx-auto px-6" data-atomic-id="a12js6td">
           <motion.div
             variants={shouldReduceMotion ? undefined : staggerContainer}
             initial="hidden"
@@ -608,13 +654,19 @@ export default function HomePage() {
               transition={{ duration: 0.25 }}
               className="md:col-span-2 p-8 rounded-2xl bg-gradient-to-br from-purple-600/15 via-purple-600/5 to-transparent border border-purple-500/20 hover:border-purple-500/35 transition-all duration-300 shadow-[0_1px_2px_rgba(0,0,0,0.2),0_8px_32px_-8px_rgba(0,0,0,0.5)] group"
             >
-              <div className="w-11 h-11 rounded-xl bg-purple-500/15 border border-purple-500/25 flex items-center justify-center mb-6 group-hover:bg-purple-500/25 transition-colors duration-300">
+              <div
+                className="w-11 h-11 rounded-xl bg-purple-500/15 border border-purple-500/25 flex items-center justify-center mb-6 group-hover:bg-purple-500/25 transition-colors duration-300"
+                data-atomic-id="ale3ouo">
                 <Layout size={20} className="text-purple-400" />
               </div>
-              <h3 className="text-xl font-display font-semibold tracking-tight mb-3">
+              <h3
+                className="text-xl font-display font-semibold tracking-tight mb-3"
+                data-atomic-id="a2sv8bu">
                 Product Engineering
               </h3>
-              <p className="text-white/50 leading-relaxed text-sm text-pretty">
+              <p
+                className="text-white/50 leading-relaxed text-sm text-pretty"
+                data-atomic-id="a1snpen5">
                 Full-stack feature development from database schema to polished
                 UI. I own the whole slice so nothing falls through the cracks.
                 React, Next.js, Node, and whatever the job calls for — chosen
@@ -631,13 +683,19 @@ export default function HomePage() {
               transition={{ duration: 0.25 }}
               className="p-8 rounded-2xl bg-white/[0.03] border border-white/8 hover:border-white/15 hover:bg-white/[0.05] transition-all duration-300 shadow-[0_1px_2px_rgba(0,0,0,0.2),0_8px_32px_-8px_rgba(0,0,0,0.5)] group"
             >
-              <div className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 group-hover:bg-purple-500/15 group-hover:border-purple-500/25 transition-all duration-300">
+              <div
+                className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 group-hover:bg-purple-500/15 group-hover:border-purple-500/25 transition-all duration-300"
+                data-atomic-id="ayxutjo">
                 <Sparkles size={20} className="text-white/50 group-hover:text-purple-400 transition-colors duration-300" />
               </div>
-              <h3 className="text-xl font-display font-semibold tracking-tight mb-3">
+              <h3
+                className="text-xl font-display font-semibold tracking-tight mb-3"
+                data-atomic-id="a15yfpwu">
                 Design Systems
               </h3>
-              <p className="text-white/50 leading-relaxed text-sm text-pretty">
+              <p
+                className="text-white/50 leading-relaxed text-sm text-pretty"
+                data-atomic-id="a1ndydwl">
                 Scalable component libraries with strong token foundations,
                 accessibility baked in, and Figma parity that keeps design and
                 code in sync.
@@ -645,41 +703,54 @@ export default function HomePage() {
             </motion.div>
 
             {/* Bottom two */}
-            {services.slice(2).map((service) => (
-              <motion.div
-                key={service.title}
-                variants={shouldReduceMotion ? undefined : scaleIn}
-                whileHover={
-                  shouldReduceMotion ? undefined : { y: -4, scale: 1.01 }
-                }
-                transition={{ duration: 0.25 }}
-                className="p-8 rounded-2xl bg-white/[0.03] border border-white/8 hover:border-white/15 hover:bg-white/[0.05] transition-all duration-300 shadow-[0_1px_2px_rgba(0,0,0,0.2),0_8px_32px_-8px_rgba(0,0,0,0.5)] group"
-              >
-                <div className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 group-hover:bg-purple-500/15 group-hover:border-purple-500/25 transition-all duration-300">
-                  <service.icon
-                    size={20}
-                    className="text-white/50 group-hover:text-purple-400 transition-colors duration-300"
-                  />
-                </div>
-                <h3 className="text-xl font-display font-semibold tracking-tight mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-white/50 leading-relaxed text-sm text-pretty">
-                  {service.description}
-                </p>
-              </motion.div>
-            ))}
+            {services.slice(2).map((service, __atomicIdx) => (<motion.div
+              key={service.title}
+              variants={shouldReduceMotion ? undefined : scaleIn}
+              whileHover={
+                shouldReduceMotion ? undefined : { y: -4, scale: 1.01 }
+              }
+              transition={{ duration: 0.25 }}
+              className="p-8 rounded-2xl bg-white/[0.03] border border-white/8 hover:border-white/15 hover:bg-white/[0.05] transition-all duration-300 shadow-[0_1px_2px_rgba(0,0,0,0.2),0_8px_32px_-8px_rgba(0,0,0,0.5)] group"
+            >
+              <div
+                className="w-11 h-11 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mb-6 group-hover:bg-purple-500/15 group-hover:border-purple-500/25 transition-all duration-300"
+                data-atomic-id="a274toq"
+                data-atomic-instance={__atomicIdx}>
+                <service.icon
+                  size={20}
+                  className="text-white/50 group-hover:text-purple-400 transition-colors duration-300"
+                />
+              </div>
+              <h3
+                className="text-xl font-display font-semibold tracking-tight mb-3"
+                data-atomic-id="a1qhlm5g"
+                data-atomic-instance={__atomicIdx}>
+                {service.title}
+              </h3>
+              <p
+                className="text-white/50 leading-relaxed text-sm text-pretty"
+                data-atomic-id="a1luv63f"
+                data-atomic-instance={__atomicIdx}>
+                {service.description}
+              </p>
+            </motion.div>))}
           </motion.div>
         </div>
       </section>
-
       {/* ── PROJECTS ─────────────────────────────────────────────────────── */}
-      <section id="projects" className="relative py-24 md:py-32">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-purple-600/6 rounded-full blur-[100px]" />
+      <section
+        id="projects"
+        className="relative py-24 md:py-32"
+        data-atomic-id="a1vwqf6a">
+        <div
+          className="absolute inset-0 pointer-events-none"
+          data-atomic-id="a1g24hdv">
+          <div
+            className="absolute left-0 top-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-purple-600/6 rounded-full blur-[100px]"
+            data-atomic-id="a1wz1ap2" />
         </div>
 
-        <div className="relative max-w-6xl mx-auto px-6">
+        <div className="relative max-w-6xl mx-auto px-6" data-atomic-id="a1g3jbid">
           <motion.div
             variants={shouldReduceMotion ? undefined : staggerContainer}
             initial="hidden"
@@ -687,7 +758,7 @@ export default function HomePage() {
             viewport={{ once: true, margin: "-80px" }}
             className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14"
           >
-            <div className="space-y-4">
+            <div className="space-y-4" data-atomic-id="a1q5zcdn">
               <motion.div variants={shouldReduceMotion ? undefined : fadeInUp}>
                 <SectionLabel>
                   <FileCode size={11} />
@@ -711,7 +782,7 @@ export default function HomePage() {
           </motion.div>
 
           {/* Featured projects — alternating layout */}
-          <div className="space-y-8 mb-8">
+          <div className="space-y-8 mb-8" data-atomic-id="a4smhbg">
             {projects
               .filter((p) => p.featured)
               .map((project, i) => (
@@ -730,36 +801,59 @@ export default function HomePage() {
                   }`}
                 >
                   {/* Image */}
-                  <div className="relative aspect-[16/10] md:aspect-auto overflow-hidden bg-[#111]">
+                  <div
+                    className="relative aspect-[16/10] md:aspect-auto overflow-hidden bg-[#111]"
+                    data-atomic-id="ay6r19b"
+                    data-atomic-instance={i}>
                     <img
                       src={project.image}
                       alt={project.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-transparent" />
+                      data-atomic-id="ajzu27w"
+                      data-atomic-instance={i} />
+                    <div
+                      className="absolute inset-0 bg-gradient-to-br from-purple-900/20 to-transparent"
+                      data-atomic-id="ak18s1w"
+                      data-atomic-instance={i} />
                   </div>
 
                   {/* Content */}
-                  <div className="p-8 md:p-10 bg-[#0f0f0f] flex flex-col justify-center gap-5">
-                    <div className="flex flex-wrap gap-2">
+                  <div
+                    className="p-8 md:p-10 bg-[#0f0f0f] flex flex-col justify-center gap-5"
+                    data-atomic-id="ay9kpib"
+                    data-atomic-instance={i}>
+                    <div
+                      className="flex flex-wrap gap-2"
+                      data-atomic-id="axjl2me"
+                      data-atomic-instance={i}>
                       {project.tags.map((tag) => (
                         <Tag key={tag} label={tag} />
                       ))}
                     </div>
-                    <div>
-                      <h3 className="text-2xl font-display font-bold tracking-tight mb-3">
+                    <div data-atomic-id="axkzwqw" data-atomic-instance={i}>
+                      <h3
+                        className="text-2xl font-display font-bold tracking-tight mb-3"
+                        data-atomic-id="an53f9f"
+                        data-atomic-instance={i}>
                         {project.title}
                       </h3>
-                      <p className="text-white/50 leading-relaxed text-sm text-pretty">
+                      <p
+                        className="text-white/50 leading-relaxed text-sm text-pretty"
+                        data-atomic-id="ak2n2oq"
+                        data-atomic-instance={i}>
                         {project.description}
                       </p>
                     </div>
-                    <div className="flex items-center gap-4 pt-1">
+                    <div
+                      className="flex items-center gap-4 pt-1"
+                      data-atomic-id="axmeqve"
+                      data-atomic-instance={i}>
                       {project.liveUrl && (
                         <a
                           href={project.liveUrl}
                           className="inline-flex items-center gap-1.5 text-sm font-medium text-purple-400 hover:text-purple-300 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 rounded group/link"
-                        >
+                          data-atomic-id="a1lr8son"
+                          data-atomic-instance={i}>
                           Live site
                           <ExternalLink
                             size={13}
@@ -771,7 +865,8 @@ export default function HomePage() {
                         <a
                           href={project.githubUrl}
                           className="inline-flex items-center gap-1.5 text-sm font-medium text-white/40 hover:text-white/70 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 rounded"
-                        >
+                          data-atomic-id="aszh3i1"
+                          data-atomic-instance={i}>
                           <Github size={13} />
                           Source
                         </a>
@@ -785,69 +880,94 @@ export default function HomePage() {
           {/* Non-featured project */}
           {projects
             .filter((p) => !p.featured)
-            .map((project) => (
-              <motion.div
-                key={project.id}
-                variants={shouldReduceMotion ? undefined : fadeInUp}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-60px" }}
-                whileHover={shouldReduceMotion ? undefined : { y: -3 }}
-                transition={{ duration: 0.25 }}
-                className="group p-7 rounded-2xl bg-white/[0.03] border border-white/8 hover:border-purple-500/25 hover:bg-white/[0.05] transition-all duration-300 shadow-[0_1px_2px_rgba(0,0,0,0.2),0_8px_24px_-8px_rgba(0,0,0,0.4)] flex flex-col md:flex-row gap-6 items-start"
-              >
-                <div className="w-full md:w-48 h-32 rounded-xl overflow-hidden shrink-0 bg-[#111]">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
-                  />
-                </div>
-                <div className="flex-1 space-y-3">
-                  <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <Tag key={tag} label={tag} />
-                    ))}
-                  </div>
-                  <h3 className="text-xl font-display font-semibold tracking-tight">
-                    {project.title}
-                  </h3>
-                  <p className="text-white/50 text-sm leading-relaxed text-pretty">
-                    {project.description}
-                  </p>
-                  <div className="flex items-center gap-4 pt-1">
-                    {project.liveUrl && (
-                      <a
-                        href={project.liveUrl}
-                        className="inline-flex items-center gap-1.5 text-sm font-medium text-purple-400 hover:text-purple-300 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 rounded"
-                      >
-                        Live site
-                        <ExternalLink size={13} />
-                      </a>
-                    )}
-                    {project.githubUrl && (
-                      <a
-                        href={project.githubUrl}
-                        className="inline-flex items-center gap-1.5 text-sm font-medium text-white/40 hover:text-white/70 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 rounded"
-                      >
-                        <Github size={13} />
-                        Source
-                      </a>
-                    )}
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+            .map((project, __atomicIdx) => (<motion.div
+            key={project.id}
+            variants={shouldReduceMotion ? undefined : fadeInUp}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, margin: "-60px" }}
+            whileHover={shouldReduceMotion ? undefined : { y: -3 }}
+            transition={{ duration: 0.25 }}
+            className="group p-7 rounded-2xl bg-white/[0.03] border border-white/8 hover:border-purple-500/25 hover:bg-white/[0.05] transition-all duration-300 shadow-[0_1px_2px_rgba(0,0,0,0.2),0_8px_24px_-8px_rgba(0,0,0,0.4)] flex flex-col md:flex-row gap-6 items-start"
+          >
+            <div
+              className="w-full md:w-48 h-32 rounded-xl overflow-hidden shrink-0 bg-[#111]"
+              data-atomic-id="a1rw7dxa"
+              data-atomic-instance={__atomicIdx}>
+              <img
+                src={project.image}
+                alt={project.title}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                data-atomic-id="a1d91mkb"
+                data-atomic-instance={__atomicIdx} />
+            </div>
+            <div
+              className="flex-1 space-y-3"
+              data-atomic-id="a1rxm81s"
+              data-atomic-instance={__atomicIdx}>
+              <div
+                className="flex flex-wrap gap-2"
+                data-atomic-id="a1k0x2mb"
+                data-atomic-instance={__atomicIdx}>
+                {project.tags.map((tag) => (
+                  <Tag key={tag} label={tag} />
+                ))}
+              </div>
+              <h3
+                className="text-xl font-display font-semibold tracking-tight"
+                data-atomic-id="apdj62l"
+                data-atomic-instance={__atomicIdx}>
+                {project.title}
+              </h3>
+              <p
+                className="text-white/50 text-sm leading-relaxed text-pretty"
+                data-atomic-id="a19yxr4k"
+                data-atomic-instance={__atomicIdx}>
+                {project.description}
+              </p>
+              <div
+                className="flex items-center gap-4 pt-1"
+                data-atomic-id="a1k55kzt"
+                data-atomic-instance={__atomicIdx}>
+                {project.liveUrl && (
+                  <a
+                    href={project.liveUrl}
+                    className="inline-flex items-center gap-1.5 text-sm font-medium text-purple-400 hover:text-purple-300 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 rounded"
+                    data-atomic-id="a228a9i"
+                    data-atomic-instance={__atomicIdx}>
+                    Live site
+                    <ExternalLink size={13} />
+                  </a>
+                )}
+                {project.githubUrl && (
+                  <a
+                    href={project.githubUrl}
+                    className="inline-flex items-center gap-1.5 text-sm font-medium text-white/40 hover:text-white/70 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 rounded"
+                    data-atomic-id="a18bkn20"
+                    data-atomic-instance={__atomicIdx}>
+                    <Github size={13} />
+                    Source
+                  </a>
+                )}
+              </div>
+            </div>
+          </motion.div>))}
         </div>
       </section>
-
       {/* ── SKILLS ───────────────────────────────────────────────────────── */}
-      <section id="skills" className="relative py-24 md:py-32 bg-[#0d0d0d]">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-transparent via-white/10 to-transparent" />
+      <section
+        id="skills"
+        className="relative py-24 md:py-32 bg-[#0d0d0d]"
+        data-atomic-id="a1j4p3rq">
+        <div
+          className="absolute inset-0 pointer-events-none"
+          data-atomic-id="a1tlvm2v">
+          <div
+            className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-transparent via-white/10 to-transparent"
+            data-atomic-id="ajjyr1m" />
         </div>
 
-        <div className="relative max-w-6xl mx-auto px-6">
+        <div className="relative max-w-6xl mx-auto px-6" data-atomic-id="a1tnag7d">
           <motion.div
             variants={shouldReduceMotion ? undefined : staggerContainer}
             initial="hidden"
@@ -880,19 +1000,18 @@ export default function HomePage() {
             viewport={{ once: true }}
             className="flex flex-wrap justify-center gap-2 mb-10"
           >
-            {skillCategories.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setActiveSkillCategory(cat)}
-                className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 ${
-                  activeSkillCategory === cat
-                    ? "bg-purple-600 text-white shadow-[0_0_12px_rgba(168,85,247,0.4)]"
-                    : "bg-white/5 text-white/50 hover:text-white hover:bg-white/10 border border-white/8"
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
+            {skillCategories.map((cat, __atomicIdx) => (<button
+              key={cat}
+              onClick={() => setActiveSkillCategory(cat)}
+              className={`px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 ${
+                activeSkillCategory === cat
+                  ? "bg-purple-600 text-white shadow-[0_0_12px_rgba(168,85,247,0.4)]"
+                  : "bg-white/5 text-white/50 hover:text-white hover:bg-white/10 border border-white/8"
+              }`}
+              data-atomic-id="a1q2o1lj"
+              data-atomic-instance={__atomicIdx}>
+              {cat}
+            </button>))}
           </motion.div>
 
           {/* Skills grid */}
@@ -903,37 +1022,42 @@ export default function HomePage() {
             viewport={{ once: true, margin: "-60px" }}
             className="flex flex-wrap justify-center gap-3"
           >
-            {filteredSkills.map((skill) => (
-              <motion.div
-                key={skill.name}
-                variants={shouldReduceMotion ? undefined : scaleIn}
-                whileHover={
-                  shouldReduceMotion
-                    ? undefined
-                    : { y: -3, scale: 1.05 }
-                }
-                transition={{ duration: 0.2 }}
-                className="px-5 py-3 rounded-xl bg-white/[0.04] border border-white/8 hover:border-purple-500/30 hover:bg-purple-500/8 transition-all duration-200 shadow-[0_1px_2px_rgba(0,0,0,0.15),0_4px_12px_-4px_rgba(0,0,0,0.3)] cursor-default"
-              >
-                <span className="text-sm font-medium text-white/75 hover:text-white transition-colors duration-200">
-                  {skill.name}
-                </span>
-                <span className="block text-xs text-white/30 mt-0.5">
-                  {skill.category}
-                </span>
-              </motion.div>
-            ))}
+            {filteredSkills.map((skill, __atomicIdx) => (<motion.div
+              key={skill.name}
+              variants={shouldReduceMotion ? undefined : scaleIn}
+              whileHover={
+                shouldReduceMotion
+                  ? undefined
+                  : { y: -3, scale: 1.05 }
+              }
+              transition={{ duration: 0.2 }}
+              className="px-5 py-3 rounded-xl bg-white/[0.04] border border-white/8 hover:border-purple-500/30 hover:bg-purple-500/8 transition-all duration-200 shadow-[0_1px_2px_rgba(0,0,0,0.15),0_4px_12px_-4px_rgba(0,0,0,0.3)] cursor-default"
+            >
+              <span
+                className="text-sm font-medium text-white/75 hover:text-white transition-colors duration-200"
+                data-atomic-id="a1111i44"
+                data-atomic-instance={__atomicIdx}>
+                {skill.name}
+              </span>
+              <span
+                className="block text-xs text-white/30 mt-0.5"
+                data-atomic-id="a12bn48m"
+                data-atomic-instance={__atomicIdx}>
+                {skill.category}
+              </span>
+            </motion.div>))}
           </motion.div>
         </div>
       </section>
-
       {/* ── TESTIMONIALS ─────────────────────────────────────────────────── */}
-      <section className="relative py-24 md:py-32">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute right-1/4 top-1/2 -translate-y-1/2 w-[500px] h-[400px] bg-purple-600/6 rounded-full blur-[100px]" />
+      <section className="relative py-24 md:py-32" data-atomic-id="a4e08s1">
+        <div className="absolute inset-0 pointer-events-none" data-atomic-id="aezzmte">
+          <div
+            className="absolute right-1/4 top-1/2 -translate-y-1/2 w-[500px] h-[400px] bg-purple-600/6 rounded-full blur-[100px]"
+            data-atomic-id="andits5" />
         </div>
 
-        <div className="relative max-w-6xl mx-auto px-6">
+        <div className="relative max-w-6xl mx-auto px-6" data-atomic-id="af1egxw">
           <motion.div
             variants={shouldReduceMotion ? undefined : staggerContainer}
             initial="hidden"
@@ -980,7 +1104,10 @@ export default function HomePage() {
                 }`}
               >
                 {/* Stars */}
-                <div className="flex items-center gap-1 mb-5">
+                <div
+                  className="flex items-center gap-1 mb-5"
+                  data-atomic-id="a1us2gxo"
+                  data-atomic-instance={i}>
                   {Array.from({ length: 5 }).map((_, si) => (
                     <Star
                       key={si}
@@ -989,20 +1116,33 @@ export default function HomePage() {
                     />
                   ))}
                 </div>
-                <p className="text-white/70 text-sm leading-relaxed mb-6 text-pretty">
+                <p
+                  className="text-white/70 text-sm leading-relaxed mb-6 text-pretty"
+                  data-atomic-id="ad1himj"
+                  data-atomic-instance={i}>
                   "{t.quote}"
                 </p>
-                <div className="flex items-center gap-3">
+                <div
+                  className="flex items-center gap-3"
+                  data-atomic-id="a1uuw56o"
+                  data-atomic-instance={i}>
                   <img
                     src={t.avatar}
                     alt={t.author}
                     className="w-9 h-9 rounded-full object-cover ring-1 ring-white/10"
-                  />
-                  <div>
-                    <div className="text-sm font-medium text-white/85">
+                    data-atomic-id="a1cdbb5p"
+                    data-atomic-instance={i} />
+                  <div data-atomic-id="a1ceq0zp" data-atomic-instance={i}>
+                    <div
+                      className="text-sm font-medium text-white/85"
+                      data-atomic-id="aiuga08"
+                      data-atomic-instance={i}>
                       {t.author}
                     </div>
-                    <div className="text-xs text-white/40">{t.role}</div>
+                    <div
+                      className="text-xs text-white/40"
+                      data-atomic-id="aivv44q"
+                      data-atomic-instance={i}>{t.role}</div>
                   </div>
                 </div>
               </motion.div>
@@ -1010,16 +1150,24 @@ export default function HomePage() {
           </motion.div>
         </div>
       </section>
-
       {/* ── CONTACT ──────────────────────────────────────────────────────── */}
-      <section id="contact" className="relative py-24 md:py-32 bg-[#0d0d0d]">
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-transparent via-white/10 to-transparent" />
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-purple-600/8 rounded-full blur-[100px]" />
+      <section
+        id="contact"
+        className="relative py-24 md:py-32 bg-[#0d0d0d]"
+        data-atomic-id="a1qn2zcl">
+        <div className="absolute inset-0 pointer-events-none" data-atomic-id="asjqrie">
+          <div
+            className="absolute top-0 left-1/2 -translate-x-1/2 w-px h-24 bg-gradient-to-b from-transparent via-white/10 to-transparent"
+            data-atomic-id="a18zkc3t" />
+          <div
+            className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-purple-600/8 rounded-full blur-[100px]"
+            data-atomic-id="a190z68b" />
         </div>
 
-        <div className="relative max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-16 items-start">
+        <div className="relative max-w-6xl mx-auto px-6" data-atomic-id="asl5lmw">
+          <div
+            className="grid md:grid-cols-2 gap-16 items-start"
+            data-atomic-id="a1frfwgb">
             {/* Left: copy */}
             <motion.div
               variants={shouldReduceMotion ? undefined : staggerContainer}
@@ -1058,8 +1206,10 @@ export default function HomePage() {
                 <a
                   href={`mailto:${BRAND.email}`}
                   className="flex items-center gap-3 text-sm text-white/60 hover:text-white transition-colors duration-200 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 rounded"
-                >
-                  <span className="w-9 h-9 rounded-lg bg-white/5 border border-white/8 flex items-center justify-center group-hover:bg-purple-500/15 group-hover:border-purple-500/25 transition-all duration-200">
+                  data-atomic-id="a144g36i">
+                  <span
+                    className="w-9 h-9 rounded-lg bg-white/5 border border-white/8 flex items-center justify-center group-hover:bg-purple-500/15 group-hover:border-purple-500/25 transition-all duration-200"
+                    data-atomic-id="asbrhny">
                     <Mail size={14} className="text-white/50 group-hover:text-purple-400 transition-colors duration-200" />
                   </span>
                   {BRAND.email}
@@ -1069,8 +1219,10 @@ export default function HomePage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-sm text-white/60 hover:text-white transition-colors duration-200 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 rounded"
-                >
-                  <span className="w-9 h-9 rounded-lg bg-white/5 border border-white/8 flex items-center justify-center group-hover:bg-purple-500/15 group-hover:border-purple-500/25 transition-all duration-200">
+                  data-atomic-id="a144g4v0">
+                  <span
+                    className="w-9 h-9 rounded-lg bg-white/5 border border-white/8 flex items-center justify-center group-hover:bg-purple-500/15 group-hover:border-purple-500/25 transition-all duration-200"
+                    data-atomic-id="a12scz74">
                     <Github size={14} className="text-white/50 group-hover:text-purple-400 transition-colors duration-200" />
                   </span>
                   github.com/alexmercer
@@ -1080,8 +1232,10 @@ export default function HomePage() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-3 text-sm text-white/60 hover:text-white transition-colors duration-200 group focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 rounded"
-                >
-                  <span className="w-9 h-9 rounded-lg bg-white/5 border border-white/8 flex items-center justify-center group-hover:bg-purple-500/15 group-hover:border-purple-500/25 transition-all duration-200">
+                  data-atomic-id="a144g6ji">
+                  <span
+                    className="w-9 h-9 rounded-lg bg-white/5 border border-white/8 flex items-center justify-center group-hover:bg-purple-500/15 group-hover:border-purple-500/25 transition-all duration-200"
+                    data-atomic-id="a1d8ygqa">
                     <Linkedin size={14} className="text-white/50 group-hover:text-purple-400 transition-colors duration-200" />
                   </span>
                   linkedin.com/in/alexmercer
@@ -1096,7 +1250,9 @@ export default function HomePage() {
               whileInView="visible"
               viewport={{ once: true, margin: "-80px" }}
             >
-              <div className="p-8 rounded-2xl bg-white/[0.03] border border-white/8 shadow-[0_1px_2px_rgba(0,0,0,0.2),0_16px_48px_-12px_rgba(0,0,0,0.6)]">
+              <div
+                className="p-8 rounded-2xl bg-white/[0.03] border border-white/8 shadow-[0_1px_2px_rgba(0,0,0,0.2),0_16px_48px_-12px_rgba(0,0,0,0.6)]"
+                data-atomic-id="a1avivjr">
                 {formStatus === "sent" ? (
                   <motion.div
                     initial={{ opacity: 0, scale: 0.9 }}
@@ -1104,30 +1260,37 @@ export default function HomePage() {
                     transition={{ duration: 0.4, ease: "easeOut" }}
                     className="flex flex-col items-center justify-center py-12 gap-4 text-center"
                   >
-                    <div className="w-14 h-14 rounded-full bg-green-500/15 border border-green-500/25 flex items-center justify-center">
+                    <div
+                      className="w-14 h-14 rounded-full bg-green-500/15 border border-green-500/25 flex items-center justify-center"
+                      data-atomic-id="a11i3hs">
                       <CheckCircle size={24} className="text-green-400" />
                     </div>
-                    <h3 className="text-xl font-display font-semibold">
+                    <h3 className="text-xl font-display font-semibold" data-atomic-id="awbi45m">
                       Message sent!
                     </h3>
-                    <p className="text-white/50 text-sm leading-relaxed max-w-xs">
+                    <p
+                      className="text-white/50 text-sm leading-relaxed max-w-xs"
+                      data-atomic-id="ai75xxd">
                       Thanks for reaching out. I'll get back to you within one
                       business day.
                     </p>
                     <button
                       onClick={() => setFormStatus("idle")}
                       className="mt-2 text-sm text-purple-400 hover:text-purple-300 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 rounded"
-                    >
+                      data-atomic-id="a14vt227">
                       Send another message
                     </button>
                   </motion.div>
                 ) : (
-                  <form onSubmit={handleFormSubmit} className="space-y-5">
-                    <div className="space-y-1.5">
+                  <form
+                    onSubmit={handleFormSubmit}
+                    className="space-y-5"
+                    data-atomic-id="aazuybd">
+                    <div className="space-y-1.5" data-atomic-id="au4v6tn">
                       <label
                         htmlFor="name"
                         className="block text-xs font-medium text-white/50 uppercase tracking-wider"
-                      >
+                        data-atomic-id="a1mlcwi3">
                         Name
                       </label>
                       <input
@@ -1139,13 +1302,13 @@ export default function HomePage() {
                         onChange={handleFormChange}
                         placeholder="Your name"
                         className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/25 text-sm focus:outline-none focus:border-purple-500/50 focus:bg-white/8 transition-all duration-200"
-                      />
+                        data-atomic-id="au8884d" />
                     </div>
-                    <div className="space-y-1.5">
+                    <div className="space-y-1.5" data-atomic-id="au6a0y5">
                       <label
                         htmlFor="email"
                         className="block text-xs font-medium text-white/50 uppercase tracking-wider"
-                      >
+                        data-atomic-id="a1cnhp71">
                         Email
                       </label>
                       <input
@@ -1157,13 +1320,13 @@ export default function HomePage() {
                         onChange={handleFormChange}
                         placeholder="you@company.com"
                         className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/25 text-sm focus:outline-none focus:border-purple-500/50 focus:bg-white/8 transition-all duration-200"
-                      />
+                        data-atomic-id="akad0tb" />
                     </div>
-                    <div className="space-y-1.5">
+                    <div className="space-y-1.5" data-atomic-id="au7ov2n">
                       <label
                         htmlFor="message"
                         className="block text-xs font-medium text-white/50 uppercase tracking-wider"
-                      >
+                        data-atomic-id="a12pmhvz">
                         Message
                       </label>
                       <textarea
@@ -1175,7 +1338,7 @@ export default function HomePage() {
                         onChange={handleFormChange}
                         placeholder="Tell me about your project..."
                         className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder:text-white/25 text-sm focus:outline-none focus:border-purple-500/50 focus:bg-white/8 transition-all duration-200 resize-none"
-                      />
+                        data-atomic-id="ax47633" />
                     </div>
                     <motion.button
                       type="submit"
