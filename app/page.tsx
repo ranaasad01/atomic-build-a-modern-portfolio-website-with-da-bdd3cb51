@@ -1,4 +1,5 @@
 "use client";
+
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
@@ -473,7 +474,7 @@ export default function HomePage() {
                 className="relative rounded-3xl overflow-hidden aspect-[4/5] shadow-[0_1px_2px_rgba(0,0,0,0.3),0_24px_64px_-16px_rgba(0,0,0,0.7)] ring-1 ring-white/8"
                 data-atomic-id="a1ak3xz5">
                 <img
-                  src="https://media.licdn.com/dms/image/v2/C5603AQEzcEfH73Yx_w/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1554802851672?e=2147483647&v=beta&t=dj7TAjD3hnbucRwbY4Q4mZZd9iwb7uGnq5Q34J3_jMo"
+                  src="https://titoaistorageaccount.blob.core.windows.net/titoai-storage/bdd3cb51-7458-492d-9c88-349fa09199b7/images/uploaded-1782980157122-zh5ce4.png?v=1782980157943"
                   alt="Alex Mercer — Creative Developer"
                   className="w-full h-full object-cover"
                   data-atomic-id="a6gm5a" />
